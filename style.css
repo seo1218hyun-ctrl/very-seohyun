@@ -1,0 +1,86 @@
+/* 디자인은 이 파일에 모여 있습니다. 색을 바꾸고 싶으면 아래 다섯 줄만 고치면 됩니다. */
+:root {
+  --bg: #161616;      /* 바탕 */
+  --fg: #ffffff;      /* 글자 */
+  --soft: #b4b7be;    /* 덜 진한 글자 */
+  --muted: #8a8f9a;   /* 작은 글자 */
+  --accent: #7b87ec;  /* 강조색 */
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  word-break: keep-all;
+}
+
+main {
+  width: min(680px, 100%);
+}
+
+.label {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: clamp(40px, 9vw, 72px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.lead {
+  margin-top: 24px;
+  color: var(--soft);
+  font-size: clamp(17px, 2.6vw, 20px);
+  line-height: 1.6;
+}
+
+.card {
+  margin-top: 48px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.card-label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card-body {
+  margin-top: 8px;
+  font-size: clamp(20px, 3.4vw, 26px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
